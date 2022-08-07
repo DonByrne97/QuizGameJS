@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz Game</title>
+</head>
+<body>
+
+    <div class="main">
+        <h2>Quiz Game</h2>
+        <p id="flavor-text">Miss three questions and it's game over!</p>
+        <center>
+            <button id="begin-game">Begin Game</button>
+            <button id="show-leaderboard">Show Leaderboard</button>
+        </center>
+        <hr>
+        <h4>What Is This?</h4>
+        <p>
+            This is a simple quiz game made in vanilla JavaScript. No external libraries 
+            or packages are used.
+        </p>
+        <h4>How Do I Restart the Game?</h4>
+        <p>
+            Simply refresh your browser. Only one HTML page is loaded (index.html).
+        </p>
+        <h4>Who Made This?</h4>
+        <p>
+            <a href="https://github.com/donbyrne97">Brandon Byrne</a>
+        </p>
+        <h4></h4>
+    </div>
+
+    <div class="question">
+        <h6 id="current-score">Current Score</h6>
+        <h4 id="question-text">Question Text</h4>
+        <button id="true">True</button>
+        <button id="false">False</button>
+    </div>
+
+    <div class="multichoice-question">
+        <h6 id="multichoice-current-score">Current Score</h6>
+        <h4 id="multichoice-question-text">Question Text</h4>
+        <button id="option-1">A</button>
+        <button id="option-2">B</button>
+        <button id="option-3">C</button>
+        <button id="option-4">D</button>
+    </div>
+
+    <div class="quiz-complete">
+        <center>
+            <h2>Quiz Complete!</h2>
+            <p>You've completed the quiz!</p>
+            <button id="submit-score">Submit Results to Leaderboard</button>
+            <button id="restart-game">Restart Game</button>
+        </center>
+    </div>
+
+    <div class="correct-modal" id="correct-modal">
+        <div class="correct-modal-content">
+            <span class="close">&times;</span>
+            <h3>Correct!</h3>
+            <p id="correct-explanation">Explanation</p>
+        </div>
+    </div>
+
+    <div class="game-over-modal" id="game-over-modal">
+        <div class="game-over-modal-content">
+            <h3>Game Over!</h3>
+            <p>Uh oh! You've answered three questions incorrectly. You'll need to restart the game!</p>
+            <button id="restart-game">Restart Game</button>
+        </div>
+    </div>
+
+    <div class="leaderboard-modal" id="leaderboard-modal">
+        <div class="leaderboard-modal-content">
+            <span class="close-leaderboard">&times;</span>
+            <h3>Leaderboard</h3>
+                <div class="leaderboard-entry" id="leaderboard-entry">
+                    Name: <b id="leaderboard-entry-name">Default Dan</b>
+                    <br>
+                    Score: <b id="leaderboard-entry-score">0</b>
+                    <br>
+                    Misses: <b id="leaderboard-entry-misses">4</b>
+                </div>
+        </div>
+    </div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
